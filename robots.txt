@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://presidentielle-simple.pages.dev/sitemap.xml
