@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Présidentielle 2027 : compare en quelques secondes les propositions sur les salaires, retraites, impôts, immigration et plus. Sources visibles, parcours, actes et sondages expliqués simplement.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Présidentielle 2027 : compare les candidats simplement">
+  <meta property="og:description" content="Choisis un sujet, lis l’essentiel en quelques secondes, puis vérifie la source. Programmes, promesses → actes, parcours, justice et sondages.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Présidentielle 2027 : compare les candidats simplement">
+  <meta name="twitter:description" content="Pas de jargon : choisis un sujet, compare tout le monde et ouvre les sources si tu veux aller plus loin.">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>Présidentielle 2027 : compare les candidats simplement</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="privacy-gated">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <div id="accessGate" class="access-gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate-card">
+      <div class="gate-brand"><span class="brand-dot">●</span> Présidentielle, simplement.</div>
+      <div class="eyebrow">ACCÈS GRATUIT FINANCÉ PAR LA PUBLICITÉ</div>
+      <h1 id="gateTitle">La pub finance le site. Tes choix restent les tiens.</h1>
+      <p class="gate-lead">Pour accéder gratuitement au site, les emplacements publicitaires doivent pouvoir s’afficher. Les réponses du mode « Mes idées » ne sont jamais utilisées pour personnaliser des publicités.</p>
+
+      <section class="gate-block" id="adblockGateBlock">
+        <div class="gate-status-line">
+          <span class="gate-status-dot" id="adblockDot" aria-hidden="true"></span>
+          <div><strong id="adblockTitle">Vérification du bloqueur de publicité…</strong><small id="adblockText">Cela prend un instant.</small></div>
+        </div>
+        <button class="gate-check" id="recheckAdblock" type="button">J’ai désactivé mon bloqueur · Vérifier</button>
+      </section>
+
+      <section class="gate-block gate-consent hidden" id="consentGateBlock">
+        <div class="gate-choice-head">
+          <div><strong>Choisis le type de publicité</strong><small>Aucun traceur publicitaire non essentiel n’est activé avant ton choix.</small></div>
+        </div>
+        <div class="gate-choice-grid">
+          <button class="gate-choice" id="acceptPersonalizedAds" type="button">
+            <strong>Accepter les cookies publicitaires</strong>
+            <span>Autorise la personnalisation publicitaire et la mesure d’audience consentie lorsqu’une régie sera connectée.</span>
+          </button>
+          <button class="gate-choice" id="acceptContextualAds" type="button">
+            <strong>Refuser les cookies publicitaires</strong>
+            <span>Tu accèdes quand même au site avec des publicités sans ciblage. Les traceurs publicitaires de personnalisation restent désactivés.</span>
+          </button>
+        </div>
+        <button class="gate-customize" id="customizeConsent" type="button">Personnaliser mes choix</button>
+
+        <div class="gate-preferences hidden" id="gatePreferences">
+          <div class="preference-row locked"><div><strong>Fonctionnement essentiel</strong><span>Mémoriser ton choix de confidentialité et assurer les fonctions demandées.</span></div><span class="pref-state">Toujours actif</span></div>
+          <label class="preference-row"><div><strong>Mesure d’audience</strong><span>Mesurer la fréquentation avec un outil soumis à consentement. Aucun outil tiers n’est encore connecté dans cette version.</span></div><input id="consentAnalytics" type="checkbox"></label>
+          <label class="preference-row"><div><strong>Publicité personnalisée</strong><span>Permettre à une future régie compatible d’utiliser des traceurs pour adapter et mesurer les annonces.</span></div><input id="consentPersonalized" type="checkbox"></label>
+          <button class="gate-save" id="saveConsentPreferences" type="button">Enregistrer mes choix</button>
+        </div>
+      </section>
+
+      <details class="gate-legal-summary">
+        <summary>Confidentialité et règles en bref</summary>
+        <p><strong>Choix retirable :</strong> le bouton « Gérer mes cookies » reste disponible en bas du site. Le choix est mémorisé pendant au maximum 6 mois, puis redemandé.</p>
+        <p><strong>Données politiques :</strong> les réponses à « Mes idées » restent dans la page pendant ta session et ne sont ni envoyées à une régie publicitaire ni utilisées pour du ciblage.</p>
+        <p><strong>Version actuelle :</strong> aucune régie publicitaire ni outil d’audience tiers n’est encore branché. Les emplacements et le mécanisme de consentement sont prêts pour l’intégration future.</p>
+      </details>
+      <div class="gate-legal-links"><span>Avant publication : compléter l’identité de l’éditeur et de l’hébergeur dans les mentions légales.</span></div>
+    </div>
+  </div>
+  <header class="topbar">
+    <a class="brand" href="#" data-view="compare"><span class="brand-dot">●</span> Présidentielle, simplement.</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <button class="nav-btn active" data-view="compare">Comparer</button>
+      <button class="nav-btn" data-view="records">Promesses → actes</button>
+      <button class="nav-btn" data-view="people">Les personnes</button>
+      <button class="nav-btn" data-view="justice">Justice</button>
+      <button class="nav-btn" data-view="polls">Sondages 2027</button>
+      <button class="nav-btn" data-view="quiz">Mes idées</button>
+      <button class="nav-btn support-nav" data-view="support">♥ Soutenir</button>
+      <button class="nav-btn nav-special" data-view="special">★ Pub spéciale</button>
+      <button class="nav-btn" data-view="method">Méthode</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="view-compare" class="view active">
+      <div class="hero shell">
+        <div class="hero-kicker"><span class="live-dot"></span> Présidentielle 2027 · données vérifiées au fil de la campagne</div>
+        <h1>La politique, <span>sans devoir aimer la politique.</span></h1>
+        <p class="lead"><strong>Tu choisis ce qui te concerne.</strong> Le site résume d’abord en une phrase, puis te laisse ouvrir les détails et les sources seulement si tu en as envie.</p>
+
+        <div class="express-grid" aria-label="Choisir une façon de commencer">
+          <button class="express-card primary-path" type="button" data-express="topics">
+            <span class="express-top"><span class="express-time">30 secondes</span><span class="express-arrow">→</span></span>
+            <strong>Comparer un sujet</strong>
+            <small>Salaire, retraite, impôts, immigration… tu choisis et tu vois immédiatement qui propose quoi.</small>
+          </button>
+          <button class="express-card" type="button" data-view="records">
+            <span class="express-top"><span class="express-time">2 minutes</span><span class="express-arrow">→</span></span>
+            <strong>Promesses → actes</strong>
+            <small>Voir ce qu’ils disent aujourd’hui, ce qu’ils disaient avant et ce qu’ils ont réellement fait ou voté.</small>
+          </button>
+          <button class="express-card" type="button" data-view="quiz">
+            <span class="express-top"><span class="express-time">3 minutes</span><span class="express-arrow">→</span></span>
+            <strong>Partir de mes idées</strong>
+            <small>Réponds à des questions simples pour repérer les propositions proches de tes réponses, sans consigne de vote.</small>
+          </button>
+        </div>
+
+        <div class="quick-how" aria-label="Comment utiliser le comparateur">
+          <div><b>1</b><span><strong>Choisis un thème</strong>Pas besoin de connaître les partis.</span></div>
+          <div><b>2</b><span><strong>Lis la phrase en gros</strong>Le détail reste facultatif.</span></div>
+          <div><b>3</b><span><strong>Vérifie si tu veux</strong>La source est accessible sous chaque proposition.</span></div>
+        </div>
+
+        <div class="hero-share-row">
+          <button class="share-button" id="shareSiteButton" type="button">↗ Partager le site</button>
+          <span class="share-note">À envoyer à quelqu’un qui veut comprendre l’élection sans passer une heure sur les programmes.</span>
+          <span class="share-status" id="shareSiteStatus" aria-live="polite"></span>
+        </div>
+
+        <div class="topic-section-label"><h2 id="topicsStart">Ou choisis directement ce qui t’intéresse</h2><span>8 thèmes · comparaison identique pour tout le monde</span></div>
+        <div class="topic-grid" id="topicChips" aria-label="Choisir un thème"></div>
+        <div class="trust-strip">
+          <span>✓ <strong id="candidateCount">0</strong> personnes suivies</span>
+          <span>✓ Même ordre pour tout le monde</span>
+          <span>✓ Source sous chaque idée</span>
+          <span>✓ Expérience du pouvoir indiquée factuellement</span>
+          <span>✓ “On ne sait pas” affiché quand il manque une donnée</span>
+        </div>
+      </div>
+
+      <aside class="ad-slot ad-horizontal shell" data-ad-slot="compare-top" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement discret</strong><small>728 × 90 ou format responsive · régie à connecter</small></div>
+      </aside>
+
+      <section class="comparison shell" id="comparisonSection" aria-live="polite">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">COMPARAISON</div>
+            <h2 id="topicTitle">Salaire & SMIC</h2>
+            <p id="topicExplainer"></p>
+          </div>
+          <div class="comparison-tools">
+            <label class="topic-select-label" for="topicSelect"><span>Changer de sujet</span><select id="topicSelect" aria-label="Changer de sujet"></select></label>
+            <div class="display-toggle" role="group" aria-label="Mode d’affichage">
+              <button class="toggle-btn active" data-mode="cards">Cartes</button>
+              <button class="toggle-btn" data-mode="table">Tableau</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="baselineBox" class="baseline-box"></div>
+        <div class="candidate-filter-wrap">
+          <div>
+            <strong>Qui afficher ?</strong>
+            <span>La liste officielle 2027 n’existe pas encore.</span>
+          </div>
+          <div id="compareFilters" class="filter-bar" aria-label="Filtrer les personnes comparées"></div>
+        </div>
+        <div id="cardsMode" class="candidate-grid"></div>
+        <div id="tableMode" class="table-wrap hidden"></div>
+      </section>
+    </section>
+
+    <section id="view-records" class="view shell page-section">
+      <div class="page-intro records-intro">
+        <div class="eyebrow">PROMESSES → ACTES</div>
+        <h1>Ce qu’ils disent. Ce qu’ils disaient. Ce qu’ils ont fait.</h1>
+        <p>Les mêmes trois cases pour toutes les personnes suivies. Une promesse n’est jamais comptée comme un acte. Un vote n’est jamais présenté comme toute une carrière.</p>
+      </div>
+
+      <div class="three-rule">
+        <div><span>1</span><strong>Aujourd’hui</strong><small>Programme, projet ou position 2026/2027.</small></div>
+        <div><span>2</span><strong>Avant</strong><small>Anciennes présidentielles uniquement quand la personne était réellement candidate.</small></div>
+        <div><span>3</span><strong>Votes / actes</strong><small>Décisions gouvernementales, votes publics ou absence de bilan national comparable.</small></div>
+      </div>
+
+      <div class="record-warning">
+        <strong>Important :</strong> une décision de gouvernement est collective. Un exemple de vote ne résume pas un mandat. « Aucun bilan national comparable » ne veut pas dire « bon » ou « mauvais » : cela signifie seulement qu’on ne peut pas comparer un pouvoir national qu’une personne n’a jamais exercé.
+      </div>
+
+      <div class="record-controls">
+        <label class="record-search"><span>Rechercher une personne</span><input id="recordSearch" type="search" placeholder="Ex. Mélenchon, Attal, Le Pen…"></label>
+        <div id="recordFilters" class="filter-bar" aria-label="Filtrer les dossiers"></div>
+      </div>
+      <div class="records-summary" id="recordsSummary"></div>
+      <aside class="ad-slot ad-horizontal" data-ad-slot="records-top" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement discret</strong><small>Publicité séparée des dossiers candidats</small></div>
+      </aside>
+      <div id="recordsGrid" class="records-grid"></div>
+    </section>
+
+
+    <section id="view-justice" class="view shell page-section justice-page">
+      <div class="page-intro justice-intro">
+        <div class="eyebrow">JUSTICE · SITUATIONS DOCUMENTÉES</div>
+        <h1>Condamné, relaxé, en recours ou en attente de jugement : ce n’est pas la même chose.</h1>
+        <p>Cette page utilise uniquement des faits judiciaires documentés et affiche l’étape exacte de la procédure. Une accusation, une mise en examen, un renvoi en procès ou des réquisitions du parquet ne signifient jamais qu’une personne est coupable.</p>
+      </div>
+
+      <div class="justice-rules">
+        <div><strong>Condamnation définitive</strong><span>Les voies ordinaires de recours sont épuisées ou la décision est devenue définitive.</span></div>
+        <div><strong>Condamnation + recours</strong><span>Une condamnation existe, mais un recours est encore en cours.</span></div>
+        <div><strong>Relaxe / acquittement</strong><span>La juridiction n’a pas retenu la culpabilité dans l’affaire indiquée.</span></div>
+        <div><strong>Procédure en cours</strong><span>Pas de jugement de culpabilité : présomption d’innocence.</span></div>
+      </div>
+
+      <aside class="ad-slot ad-horizontal" data-ad-slot="justice-top" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement publicitaire</strong><small>Séparé des informations judiciaires</small></div>
+      </aside>
+
+      <div class="justice-note"><strong>Important :</strong> « Aucun dossier ajouté » signifie seulement qu’aucun dossier judiciaire notable n’a été intégré à cette base lors de cette vérification. Cela ne constitue ni un certificat de casier judiciaire vierge ni l’affirmation qu’aucun contentieux n’existe.</div>
+      <div id="justiceSummary" class="records-summary"></div>
+      <div id="justiceGrid" class="justice-grid"></div>
+    </section>
+
+    <section id="view-polls" class="view shell page-section">
+      <div class="page-intro polls-intro">
+        <div class="eyebrow">SONDAGES & STATISTIQUES 2027</div>
+        <h1>Les chiffres, sans faire croire qu’ils prédisent l’élection.</h1>
+        <p>Institut, dates, échantillon, scénario et source sont toujours visibles. Le site ne mélange jamais deux scénarios différents pour fabriquer une « moyenne maison ».</p>
+      </div>
+
+      <div class="poll-rule-box">
+        <div class="poll-rule-icon">⚠</div>
+        <div><strong>Un sondage = une photo du moment.</strong><p>Un score change selon les personnes testées, la date, la mobilisation déclarée et l’institut. Deux écarts de 1 ou 2 points peuvent être trop faibles pour conclure qu’une personne est réellement devant une autre.</p></div>
+      </div>
+
+      <div id="pollQuality"></div>
+      <section class="poll-section">
+        <div class="section-head"><div><div class="eyebrow">LE PLUS RÉCENT CHARGÉ</div><h2>Ipsos bva · 5 septembre 2026</h2><p>Un scénario complet, avec la marge indicative affichée candidat par candidat.</p></div></div>
+        <div id="latestPollMeta" class="poll-meta-grid"></div>
+        <div class="poll-scenario-title" id="latestScenarioTitle"></div>
+        <div id="latestPollChart" class="poll-chart"></div>
+      </section>
+
+      <section class="poll-section cluster17-section">
+        <div class="section-head"><div><div class="eyebrow">AUTRE SONDAGE DU 5 SEPTEMBRE</div><h2>Cluster17 · trois hypothèses, sans les mélanger.</h2><p>Même date de publication que l’enquête Ipsos, mais méthode, terrain et affiches différents. Les trois scénarios officiels restent séparés.</p></div></div>
+        <div id="cluster17Meta" class="poll-meta-grid"></div>
+        <div id="cluster17Scenarios" class="scenario-cards"></div>
+      </section>
+
+      <aside class="ad-slot ad-horizontal" data-ad-slot="polls-middle" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement discret</strong><small>Jamais intégré à un graphique ou à un résultat de sondage</small></div>
+      </aside>
+
+      <section class="poll-section compare-institutes">
+        <div class="section-head"><div><div class="eyebrow">MÊME AFFICHE, DEUX INSTITUTS</div><h2>Comparer sans faire de moyenne.</h2><p>Ipsos fin août/début septembre et Toluna Harris mi-août ont testé la même combinaison principale de 11 noms. Les dates ne sont pas identiques : on affiche donc les deux mesures côte à côte, sans les fusionner.</p></div></div>
+        <div id="sameScenarioTable" class="same-scenario"></div>
+      </section>
+
+      <section class="poll-section">
+        <div class="section-head"><div><div class="eyebrow">AUTRE ENQUÊTE DOCUMENTÉE</div><h2>Elabe · 29 août 2026</h2><p>Utile pour voir davantage de noms testés et le niveau d’intérêt pour la campagne.</p></div></div>
+        <div id="elabeStats"></div>
+      </section>
+
+      <aside class="ad-slot ad-horizontal ad-extra" data-ad-slot="polls-bottom" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement publicitaire</strong><small>Entre les statistiques et les sources officielles · jamais dans un résultat</small></div>
+      </aside>
+
+      <section class="poll-section notices-section">
+        <div class="section-head"><div><div class="eyebrow">VÉRIFIER SOI-MÊME</div><h2>Notices de la Commission des sondages</h2><p>La Commission publie les notices transmises par les instituts. C’est le point de contrôle public que le site privilégie.</p></div></div>
+        <div id="pollNotices"></div>
+      </section>
+    </section>
+
+    <section id="view-people" class="view shell page-section">
+      <div class="page-intro">
+        <div class="eyebrow">QUI SONT-ILS ?</div>
+        <h1>Leur parcours en 10 secondes.</h1>
+        <p>Les mêmes questions pour chaque personne. Quand un diplôme ou une information n’est pas vérifié dans notre source, on l’écrit au lieu de deviner.</p>
+      </div>
+
+      <div class="power-explainer">
+        <div class="power-icon">⚖</div>
+        <div>
+          <div class="eyebrow">EXPÉRIENCE DU POUVOIR NATIONAL</div>
+          <h2>Ont-ils déjà gouverné la France ?</h2>
+          <p><strong>Oui</strong> uniquement si la personne a déjà été président de la République, Premier ministre, ministre, ministre délégué ou secrétaire d’État dans un gouvernement français. Être député, sénateur, maire, président de région ou dirigeant de parti est affiché séparément : ce n’est pas le même niveau de pouvoir exécutif national.</p>
+          <p>Ce badge n’est ni positif ni négatif. Il permet à chacun de décider si cette expérience est un avantage ou, au contraire, une raison de préférer quelqu’un qui n’a jamais gouverné.</p>
+        </div>
+      </div>
+      <div id="peopleFilters" class="filter-bar people-filter-bar" aria-label="Filtrer les parcours"></div>
+      <aside class="ad-slot ad-horizontal" data-ad-slot="people-top" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement discret</strong><small>Hors des fiches personnelles pour ne favoriser personne</small></div>
+      </aside>
+      <div id="peopleGrid" class="people-grid"></div>
+    </section>
+
+    <section id="view-quiz" class="view shell page-section">
+      <div class="page-intro quiz-intro">
+        <div class="eyebrow">MES IDÉES · TEST RAPIDE</div>
+        <h1>8 réponses. Puis regarde qui est le plus proche.</h1>
+        <p>Ce test compare seulement tes réponses aux positions politiques documentées dans cette base. <strong>Il ne te dit pas pour qui voter</strong> et ne prétend pas résumer tout un programme présidentiel.</p>
+      </div>
+
+      <div class="quiz-trust">
+        <div><strong>🔒 Local uniquement</strong><span>Tes réponses restent dans cette page et ne sont pas envoyées à la publicité.</span></div>
+        <div><strong>🧭 Pas une consigne de vote</strong><span>Le résultat mesure une proximité sur ces 8 questions seulement.</span></div>
+        <div><strong>🔎 Calcul vérifiable</strong><span>Chaque accord, désaccord et position incertaine est visible avec sa source.</span></div>
+      </div>
+
+      <div class="quiz-progress-card">
+        <div class="quiz-progress-head"><strong id="quizProgressText">0 / 8 répondu</strong><span id="quizProgressHint">Réponds à au moins 4 questions pour voir un premier aperçu.</span></div>
+        <div class="quiz-progress-track"><span id="quizProgressBar"></span></div>
+      </div>
+
+      <aside class="ad-slot ad-horizontal" data-ad-slot="quiz-top" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement discret</strong><small>La publicité n’entre jamais dans le calcul de tes réponses</small></div>
+      </aside>
+
+      <div id="quizList" class="quiz-list"></div>
+
+      <section id="quizResult" class="quiz-result-panel hidden" aria-live="polite">
+        <div class="quiz-result-kicker">TON RÉSULTAT ACTUEL</div>
+        <div id="quizResultMain"></div>
+        <div id="quizAlternatives"></div>
+        <div id="quizBreakdown"></div>
+        <div class="quiz-result-footer">
+          <button id="quizReset" class="quiz-reset" type="button">↻ Refaire le test</button>
+          <button id="quizShare" class="quiz-share" type="button">↗ Partager ce test</button>
+          <span id="quizShareStatus"></span>
+        </div>
+      </section>
+
+      <div id="quizSummary" class="quiz-summary">Aucune réponse pour le moment.</div>
+    </section>
+
+
+    <section id="view-special" class="view special-ad-page" aria-labelledby="specialAdTitle">
+      <div class="special-ad-inner">
+        <div class="special-ad-disclosure">Publicité maison · hors contenu politique</div>
+        <div class="special-ad-hero">
+          <div class="special-ad-copy">
+            <div class="mini">Le projet personnel du créateur de ce site</div>
+            <h1 id="specialAdTitle">Forgotten <span>Source</span></h1>
+            <p class="manga-lead"><strong>Un univers pensé pour vivre sous plusieurs formes :</strong> manga d’abord, puis animation et jeu en ligne. Cette page est une autopromotion volontairement séparée du comparateur politique.</p>
+            <div class="manga-pill-row">
+              <span class="manga-pill">Manga</span>
+              <span class="manga-pill">Animation</span>
+              <span class="manga-pill">MMORPG</span>
+              <span class="manga-pill">Projet indépendant</span>
+            </div>
+            <div class="manga-cta-row">
+              <button class="manga-cta main" id="openMangaSite" type="button">Découvrir Forgotten Source →</button>
+              <button class="manga-cta ghost" id="shareMangaButton" type="button">Partager le projet</button>
+            </div>
+            <div class="manga-status" id="mangaPromoStatus" aria-live="polite">Le lien public du site Forgotten Source sera branché ici dès sa mise en ligne.</div>
+          </div>
+          <div class="manga-poster" role="img" aria-label="Emplacement visuel promotionnel Forgotten Source">
+            <div class="poster-copy">
+              <small>Emplacement visuel principal</small>
+              <strong>La Source<br>Oubliée</strong>
+              <span>Cette zone pourra recevoir plus tard une couverture, une illustration ou une bande-annonce officielle du projet.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-ad-separator">Un même univers · plusieurs portes d’entrée</div>
+        <div class="special-universe-grid">
+          <article class="special-universe-card"><b>01 · Lire</b><strong>Le manga</strong><p>Le point de départ de l’univers et la façon la plus simple de découvrir l’histoire.</p></article>
+          <article class="special-universe-card"><b>02 · Regarder</b><strong>L’animation</strong><p>Un prolongement prévu pour faire vivre les scènes, les personnages et le monde en mouvement.</p></article>
+          <article class="special-universe-card"><b>03 · Explorer</b><strong>Le MMORPG</strong><p>Un projet de jeu pensé pour permettre, à terme, d’entrer soi-même dans le même univers.</p></article>
+        </div>
+        <p class="special-ad-trust"><strong>Pourquoi cette page est différente :</strong> elle ne finance ni ne favorise aucun candidat. Elle est identifiée comme publicité maison dès le début et utilise volontairement une identité visuelle totalement différente du contenu politique afin d’éviter toute confusion.</p>
+      </div>
+    </section>
+
+
+    <section id="view-support" class="view shell page-section support-page">
+      <div class="page-intro support-intro">
+        <div class="eyebrow">SOUTENIR LE SITE</div>
+        <h1>Aider sans changer l’indépendance du site.</h1>
+        <p>Deux façons simples : faire un don volontaire ou regarder une publicité vidéo quand une régie compatible sera connectée. Aucun paiement ni aucune publicité ne change l’ordre, les notes ou la présentation des candidats.</p>
+      </div>
+
+      <div class="support-grid">
+        <article class="support-card donation-card">
+          <div class="support-icon">♥</div>
+          <div class="eyebrow">DON VOLONTAIRE</div>
+          <h2>Faire un don</h2>
+          <p>Pour financer l’hébergement, le nom de domaine, les mises à jour et la vérification des sources.</p>
+          <button class="support-primary" id="donateButton" type="button">Faire un don</button>
+          <small id="donateStatus">Lien de paiement à connecter avant la mise en ligne.</small>
+        </article>
+
+        <article class="support-card rewarded-card">
+          <div class="support-icon">▶</div>
+          <div class="eyebrow">PUBLICITÉ VOLONTAIRE</div>
+          <h2>Regarder une vidéo pour soutenir</h2>
+          <p>La vidéo ne se lance jamais toute seule. Le visiteur choisit volontairement de la regarder.</p>
+          <button class="support-primary" id="watchAdButton" type="button">Regarder une publicité</button>
+          <small>Une régie autorisant les vidéos récompensées doit être connectée pour générer réellement un revenu.</small>
+        </article>
+      </div>
+
+      <div class="rewarded-video-zone" id="rewardedVideoZone" aria-live="polite">
+        <div class="video-ad-frame">
+          <span class="ad-label">Publicité vidéo volontaire</span>
+          <div class="video-placeholder-icon">▶</div>
+          <strong>Emplacement vidéo prêt</strong>
+          <p id="rewardedVideoMessage">La publicité s’affichera ici après connexion d’une régie compatible.</p>
+        </div>
+      </div>
+
+      <div class="support-principles">
+        <div><strong>Pas de publicité intrusive</strong><span>Pas de pop-up publicitaire ni de vidéo automatique ; seul l’écran d’accès explique le financement et les choix de confidentialité.</span></div>
+        <div><strong>Publicité clairement indiquée</strong><span>Impossible de confondre une annonce avec une proposition politique.</span></div>
+        <div><strong>Aucune influence politique</strong><span>Un annonceur ne peut pas acheter une meilleure place pour un candidat.</span></div>
+        <div><strong>Choix du visiteur</strong><span>La vidéo de soutien est toujours volontaire et les préférences cookies restent modifiables.</span></div>
+      </div>
+    </section>
+
+
+    <section id="view-privacy" class="view shell page-section legal-page">
+      <div class="page-intro">
+        <div class="eyebrow">CONFIDENTIALITÉ</div>
+        <h1>Politique de confidentialité</h1>
+        <p>Version du 8 septembre 2026 · Cette page décrit le fonctionnement prévu du site. Les informations marquées « à compléter » doivent être renseignées avant la publication publique.</p>
+      </div>
+
+      <div class="legal-alert"><strong>Point particulièrement important pour un site politique :</strong> les réponses données dans « Mes idées » peuvent révéler des opinions politiques. Le site est conçu pour que ces réponses ne soient pas transmises à la publicité, à l’analytics ou à un fichier utilisateur. Dans la version actuelle, elles restent uniquement en mémoire dans la page et disparaissent au rechargement.</div>
+
+      <div class="legal-stack">
+        <article><h2>1. Responsable du traitement</h2><p><strong>Éditeur / responsable :</strong> <mark>À compléter avant publication : identité ou raison sociale</mark><br><strong>Adresse :</strong> <mark>À compléter</mark><br><strong>Contact vie privée :</strong> <mark>À compléter avec une adresse e-mail dédiée</mark></p></article>
+        <article><h2>2. Données susceptibles d’être traitées</h2><ul><li><strong>Préférence de consentement :</strong> choix « publicité personnalisée », « publicité sans ciblage » et éventuel choix d’audience. Cette préférence est stockée localement afin de ne pas redemander ton choix à chaque page.</li><li><strong>Données techniques :</strong> l’hébergeur peut traiter des journaux techniques nécessaires à la sécurité et au fonctionnement du service (par exemple adresse IP, date, erreur serveur), selon sa propre documentation.</li><li><strong>Publicité :</strong> uniquement après intégration d’une régie. Les catégories exactes de données, destinataires et partenaires devront être ajoutées ici avant activation.</li><li><strong>Dons :</strong> si un prestataire de paiement est connecté, le paiement sera traité par ce prestataire. Le site ne doit pas stocker les numéros de carte bancaire.</li></ul></article>
+        <article><h2>3. Finalités et bases légales</h2><div class="legal-table"><div><strong>Fonctionnement et sécurité</strong><span>Fournir le site et le sécuriser · intérêt légitime / nécessité technique selon le traitement.</span></div><div><strong>Mémoriser ton choix de cookies</strong><span>Respecter et conserver ta préférence · traceur strictement nécessaire à la gestion du consentement.</span></div><div><strong>Publicité personnalisée</strong><span>Personnaliser et mesurer les annonces · uniquement sur consentement préalable.</span></div><div><strong>Mesure d’audience soumise à consentement</strong><span>Comprendre la fréquentation · uniquement si activée par le visiteur.</span></div></div></article>
+        <article><h2>4. Ce que le site s’interdit</h2><ul><li>Utiliser les réponses de « Mes idées » pour déduire un profil politique publicitaire.</li><li>Vendre les réponses politiques du visiteur.</li><li>Transmettre ces réponses aux candidats, partis ou annonceurs.</li><li>Déposer des traceurs publicitaires non essentiels avant un consentement valable.</li></ul></article>
+        <article><h2>5. Destinataires</h2><p>Dans cette version : aucun partenaire publicitaire ou analytics tiers n’est activé. Avant de brancher une régie, cette page devra nommer ou rendre accessible la liste des partenaires concernés et préciser leurs rôles. L’hébergeur du futur site devra également être indiqué dans les mentions légales.</p></article>
+        <article><h2>6. Durées</h2><p>Le choix de consentement est prévu pour être conservé au maximum <strong>6 mois</strong>, puis redemandé. Les autres durées dépendront des prestataires effectivement choisis et devront être indiquées ici avant leur activation.</p></article>
+        <article><h2>7. Transferts hors Union européenne</h2><p>Aucun transfert publicitaire n’est configuré dans cette version. Si une future régie ou un prestataire transfère des données hors de l’Espace économique européen, le mécanisme juridique et les garanties applicables devront être indiqués ici avant activation.</p></article>
+        <article><h2>8. Tes droits</h2><p>Selon les traitements applicables, tu peux notamment demander l’accès, la rectification, l’effacement, la limitation ou exercer ton droit d’opposition. Lorsqu’un traitement repose sur le consentement, tu peux le retirer à tout moment. Pour les cookies, utilise le bouton <button class="inline-link-button manage-cookies" type="button">Gérer mes cookies</button>.</p><p>Tu peux également introduire une réclamation auprès de la <a href="https://www.cnil.fr/" target="_blank" rel="noopener">CNIL ↗</a>.</p></article>
+        <article><h2>9. Modification de cette politique</h2><p>Cette politique devra être mise à jour lorsqu’un nouveau prestataire, une nouvelle finalité, un nouveau formulaire ou une nouvelle catégorie de données est ajouté.</p></article>
+      </div>
+    </section>
+
+    <section id="view-cookies" class="view shell page-section legal-page">
+      <div class="page-intro">
+        <div class="eyebrow">COOKIES & PUBLICITÉ</div>
+        <h1>Politique cookies</h1>
+        <p>Le site est gratuit et financé par la publicité. Cela ne signifie pas que tous les traceurs sont obligatoires.</p>
+      </div>
+      <div class="cookie-mode-cards">
+        <article><span class="cookie-mode-icon">✓</span><h2>Publicité personnalisée</h2><p>Le visiteur autorise les traceurs publicitaires nécessaires à une future régie compatible ainsi que les finalités qu’il a choisies.</p></article>
+        <article><span class="cookie-mode-icon">○</span><h2>Publicité sans ciblage</h2><p>Le visiteur désactive la personnalisation publicitaire. Les emplacements publicitaires restent visibles pour financer le site, mais le site ne doit pas déclencher de traceurs publicitaires de personnalisation.</p></article>
+      </div>
+      <div class="legal-stack">
+        <article><h2>Traceurs essentiels</h2><p>Un stockage local peut être utilisé pour mémoriser le choix de confidentialité et sa date d’expiration. Cette finalité sert précisément à respecter le choix du visiteur.</p></article>
+        <article><h2>Traceurs publicitaires</h2><p>Ils sont désactivés avant le consentement. Une future régie ne devra être chargée en mode personnalisé qu’après un choix positif. La liste exacte des cookies, durées et partenaires devra être ajoutée ici lors de l’intégration de la régie.</p></article>
+        <article><h2>Mesure d’audience</h2><p>La version actuelle n’intègre encore aucun outil tiers. Si un outil exempté de consentement conforme aux critères applicables est choisi, il sera documenté. Sinon, il ne sera chargé qu’après consentement.</p></article>
+        <article><h2>Durée du choix</h2><p>Le site prévoit de mémoriser l’acceptation ou le refus pendant <strong>6 mois maximum</strong>. Tu peux modifier ton choix avant cette échéance.</p></article>
+        <article><h2>Changer d’avis</h2><p><button class="legal-action manage-cookies" type="button">Gérer mes cookies maintenant</button></p></article>
+      </div>
+    </section>
+
+    <section id="view-legal" class="view shell page-section legal-page">
+      <div class="page-intro">
+        <div class="eyebrow">INFORMATIONS LÉGALES</div>
+        <h1>Mentions légales</h1>
+        <p>Modèle préparé pour la publication française. Les champs surlignés doivent être remplis avec les informations réelles avant la mise en ligne publique.</p>
+      </div>
+      <div class="legal-alert warning"><strong>À faire avant publication :</strong> ne publie pas ces mentions avec les champs « À compléter ». L’identité de l’éditeur et de l’hébergeur doit être réelle et facilement accessible.</div>
+      <div class="legal-stack">
+        <article><h2>Éditeur du site</h2><p><strong>Nom / raison sociale :</strong> <mark>À compléter</mark><br><strong>Forme / statut :</strong> <mark>À compléter (particulier, EI, société…)</mark><br><strong>Adresse :</strong> <mark>À compléter</mark><br><strong>E-mail :</strong> <mark>À compléter</mark><br><strong>Téléphone :</strong> <mark>À compléter si applicable</mark><br><strong>Immatriculation / SIREN / RCS :</strong> <mark>À compléter si applicable</mark><br><strong>TVA intracommunautaire :</strong> <mark>À compléter si applicable</mark></p></article>
+        <article><h2>Directeur de la publication</h2><p><mark>À compléter avec le nom de la personne responsable de la publication.</mark></p></article>
+        <article><h2>Hébergement</h2><p><strong>Hébergeur :</strong> <mark>À compléter après choix de l’hébergeur</mark><br><strong>Adresse :</strong> <mark>À compléter</mark><br><strong>Téléphone :</strong> <mark>À compléter si requis</mark></p></article>
+        <article><h2>Objet et indépendance éditoriale</h2><p>« Présidentielle, simplement. » est un site d’information et de comparaison politique. Il ne donne pas de consigne de vote. Les espaces publicitaires sont séparés du contenu éditorial. Un annonceur ne peut pas acheter une meilleure présentation, un meilleur classement ou une modification de fiche candidat.</p></article>
+        <article><h2>Sources et rectifications</h2><p>Les propositions, votes, décisions et sondages sont accompagnés de leurs sources lorsqu’elles sont disponibles. Une procédure de correction et un moyen de contact devront être indiqués ici avant publication : <mark>adresse de contact à compléter</mark>.</p></article>
+        <article><h2>Propriété intellectuelle</h2><p>Sauf mention contraire, la structure éditoriale, les textes originaux, éléments graphiques et développements propres au site sont protégés par le droit applicable. Les documents, logos, marques, photographies ou extraits provenant de tiers restent la propriété de leurs titulaires respectifs et sont utilisés selon les droits ou exceptions applicables.</p></article>
+        <article><h2>Publicité</h2><p>Les annonces sont identifiées comme « Publicité » et ne doivent jamais être intégrées de façon à être confondues avec une proposition politique, une fiche candidat ou un résultat de sondage. La régie et les partenaires réels devront être ajoutés à la politique de confidentialité et aux paramètres de consentement avant leur activation.</p></article>
+        <article><h2>Données personnelles</h2><p>Consulte la <button class="inline-link-button" data-view="privacy" type="button">politique de confidentialité</button> et la <button class="inline-link-button" data-view="cookies" type="button">politique cookies</button>.</p></article>
+      </div>
+    </section>
+
+    <section id="view-method" class="view shell page-section">
+      <div class="page-intro">
+        <div class="eyebrow">RÈGLE DU SITE</div>
+        <h1>La neutralité doit être visible.</h1>
+        <p>Le site n’essaie pas de rendre tous les projets identiques. Il leur applique exactement la même méthode.</p>
+      </div>
+      <div class="method-grid">
+        <article><strong>1</strong><h3>Même place</h3><p>Même ordre, même taille de carte, mêmes rubriques pour chaque personne.</p></article>
+        <article><strong>2</strong><h3>Même exigence</h3><p>Une proposition n’est affichée comme actuelle que si une source datée permet de l’attribuer clairement.</p></article>
+        <article><strong>3</strong><h3>Nature visible</h3><p>Programme officiel, projet, déclaration, ancien programme ou donnée manquante : le badge ne disparaît jamais.</p></article>
+        <article><strong>4</strong><h3>Historique séparé</h3><p>Un programme de 2012 n’est jamais présenté comme une proposition de 2027. Il apparaît seulement dans “Voir l’évolution”.</p></article>
+        <article><strong>5</strong><h3>Pas de déduction partisane</h3><p>Une ancienne mesure d’un parti n’est pas attribuée à une personne qui n’était pas candidate ou signataire.</p></article>
+        <article><strong>6</strong><h3>Droit au vide</h3><p>“Pas de donnée vérifiée” vaut mieux qu’une phrase probablement vraie mais impossible à sourcer correctement.</p></article>
+        <article><strong>7</strong><h3>Pouvoir réellement exercé</h3><p>Le badge “déjà gouverné” repose uniquement sur des fonctions exécutives nationales : président, Premier ministre, ministre, ministre délégué ou secrétaire d’État.</p></article>
+        <article><strong>8</strong><h3>Mandat ≠ gouvernement</h3><p>Un député, un maire ou un président de région peut avoir beaucoup d’influence politique, mais le site ne le classe pas pour autant comme ancien membre du gouvernement.</p></article>
+        <article><strong>9</strong><h3>Justice : le stade exact</h3><p>Condamnation définitive, condamnation avec recours, relaxe, renvoi en procès ou réquisitions ne sont jamais mélangés. La présomption d’innocence est rappelée pour toute procédure sans condamnation définitive.</p></article>
+      </div>
+      <div class="legend-block">
+        <h2>Comment lire les badges</h2>
+        <div class="legend" id="legend"></div>
+      </div>
+      <aside class="ad-slot ad-horizontal" data-ad-slot="method-bottom" aria-label="Emplacement publicitaire">
+        <span class="ad-label">Publicité</span>
+        <div class="ad-placeholder"><strong>Emplacement discret</strong><small>La méthode reste indépendante des annonceurs</small></div>
+      </aside>
+    </section>
+  </main>
+
+  <dialog id="historyDialog" class="history-dialog">
+    <button class="dialog-close history-close" aria-label="Fermer">×</button>
+    <div id="historyContent"></div>
+  </dialog>
+
+  <dialog id="recordDialog" class="history-dialog record-dialog">
+    <button class="dialog-close record-close" aria-label="Fermer">×</button>
+    <div id="recordContent"></div>
+  </dialog>
+
+  <footer class="footer shell">
+    <div><strong>Présidentielle, simplement.</strong><br><span>Données de travail mises à jour le <span id="updatedDate"></span>.</span><br><button class="footer-support" data-view="support">♥ Soutenir le site</button></div>
+    <div class="footer-right">
+      <p>La liste officielle des candidats à l’élection présidentielle 2027 n’est pas encore arrêtée. Les personnes affichées sont des campagnes ou personnalités suivies, pas la liste constitutionnelle définitive.</p>
+      <div class="footer-legal-links">
+        <button class="footer-special" data-view="special" type="button">★ Pub spéciale · Forgotten Source</button>
+        <button data-view="legal" type="button">Mentions légales</button>
+        <button data-view="privacy" type="button">Confidentialité</button>
+        <button data-view="cookies" type="button">Cookies</button>
+        <button class="manage-cookies" type="button">Gérer mes cookies</button>
+      </div>
+    </div>
+  </footer>
+
+    <script src="data/meta.js"></script>
+  <script src="data/candidats.js"></script>
+  <script src="data/programmes/salaire.js"></script>
+  <script src="data/programmes/retraites.js"></script>
+  <script src="data/programmes/immigration.js"></script>
+  <script src="data/programmes/impots.js"></script>
+  <script src="data/programmes/energie.js"></script>
+  <script src="data/programmes/education.js"></script>
+  <script src="data/programmes/securite.js"></script>
+  <script src="data/programmes/innovation.js"></script>
+  <script src="data/historique.js"></script>
+  <script src="data/promesses-actes.js"></script>
+  <script src="data/sondages.js"></script>
+  <script src="data/justice.js"></script>
+  <script src="data/mes-idees.js"></script>
+  <script src="data/bootstrap.js"></script>
+  
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

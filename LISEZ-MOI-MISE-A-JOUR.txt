@@ -1,0 +1,77 @@
+PRÉSIDENTIELLE, SIMPLEMENT. — GUIDE DE MISE À JOUR
+
+Le site est maintenant MODULAIRE.
+Tu n'as plus besoin de toucher à index.html pour mettre à jour les données.
+
+DOSSIERS IMPORTANTS
+-------------------
+data/candidats.js
+  → liste des personnes, statut de candidature, informations générales.
+
+data/programmes/
+  → un fichier par grand thème :
+     salaire.js
+     retraites.js
+     immigration.js
+     impots.js
+     energie.js
+     education.js
+     securite.js
+     innovation.js
+
+data/promesses-actes.js
+  → Aujourd'hui / Avant / Votes & actes.
+
+data/justice.js
+  → condamnations, relaxes, recours, procédures documentées.
+
+data/sondages.js
+  → sondages et statistiques.
+
+data/mes-idees.js
+  → les 8 questions + positions utilisées par le test “Mes idées”.
+
+data/historique.js
+  → historique des positions et anciennes campagnes.
+
+data/meta.js
+  → date de mise à jour du site et données générales (ex. SMIC de référence).
+
+assets/css/style.css
+  → design du site.
+
+assets/js/app.js
+  → fonctionnement du site.
+  Évite d'y toucher pour une simple mise à jour politique.
+
+index.html
+  → structure des pages.
+  Évite d'y toucher pour une simple mise à jour de données.
+
+COMMENT ON FERA PLUS TARD ?
+---------------------------
+Exemple : une nouvelle proposition de Marine Le Pen sur les retraites.
+
+1. Modifier uniquement :
+   data/programmes/retraites.js
+
+2. Si cette proposition change aussi le résultat du test “Mes idées” :
+   modifier également data/mes-idees.js
+
+3. Mettre à jour la date dans :
+   data/meta.js
+
+4. Envoyer seulement les fichiers modifiés sur GitHub.
+
+Si le site est relié à GitHub + Cloudflare Pages, Cloudflare republiera automatiquement
+la nouvelle version après le changement sur GitHub.
+
+IMPORTANT
+---------
+Les fichiers .js du dossier data/ contiennent uniquement les données du site.
+Ils ont été choisis plutôt que des fichiers JSON chargés avec fetch(), car cette solution
+fonctionne aussi quand tu ouvres index.html directement sur ton ordinateur.
+
+CONSEIL
+-------
+Avant chaque grosse mise à jour, garde une copie du ZIP précédent.

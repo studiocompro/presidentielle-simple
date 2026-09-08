@@ -1,0 +1,16 @@
+{
+  "site": "Présidentielle, simplement.",
+  "structureVersion": 10,
+  "dataUpdated": "8 septembre 2026",
+  "entrypoint": "index.html",
+  "updateFiles": {
+    "candidats": "data/candidats.js",
+    "programmes": "data/programmes/",
+    "promessesActes": "data/promesses-actes.js",
+    "justice": "data/justice.js",
+    "sondages": "data/sondages.js",
+    "mesIdees": "data/mes-idees.js",
+    "historique": "data/historique.js",
+    "meta": "data/meta.js"
+  }
+}
