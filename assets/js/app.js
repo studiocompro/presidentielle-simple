@@ -93,19 +93,38 @@
   }
 
   async function detectAdBlock() {
-    const bait = document.createElement('div');
-    bait.className = 'adsbox ad-banner ad-unit pub_300x250 text-ad';
-    bait.setAttribute('aria-hidden','true');
-    bait.style.cssText = 'position:absolute!important;left:-10000px!important;top:-10000px!important;width:10px!important;height:10px!important;pointer-events:none!important;';
-    document.body.appendChild(bait);
-    await new Promise(resolve => setTimeout(resolve, 80));
-    const css = getComputedStyle(bait);
-    const testSlot = document.querySelector('.ad-slot');
-    const slotCss = testSlot ? getComputedStyle(testSlot) : null;
-    const slotHidden = !!testSlot && (testSlot.offsetHeight === 0 || testSlot.offsetWidth === 0 || slotCss.display === 'none' || slotCss.visibility === 'hidden');
-    const blocked = bait.offsetHeight === 0 || bait.offsetWidth === 0 || css.display === 'none' || css.visibility === 'hidden' || slotHidden;
-    bait.remove();
-    return blocked;
+  const bait = document.createElement('div');
+
+  bait.className =
+    'adsbox ad-banner ad-unit pub_300x250 text-ad adsbygoogle';
+
+  bait.setAttribute('aria-hidden', 'true');
+
+  bait.style.cssText =
+    'position:absolute!important;' +
+    'left:-10000px!important;' +
+    'top:-10000px!important;' +
+    'width:10px!important;' +
+    'height:10px!important;' +
+    'display:block!important;' +
+    'visibility:visible!important;' +
+    'pointer-events:none!important;';
+
+  document.body.appendChild(bait);
+
+  await new Promise(resolve => setTimeout(resolve, 150));
+
+  const css = getComputedStyle(bait);
+
+  const blocked =
+    bait.offsetHeight === 0 ||
+    bait.offsetWidth === 0 ||
+    css.display === 'none' ||
+    css.visibility === 'hidden';
+
+  bait.remove();
+
+  return blocked;
   }
 
   function showAdblockState(blocked) {
