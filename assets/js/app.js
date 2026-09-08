@@ -21,7 +21,119 @@
 
   const $ = s => document.querySelector(s);
   const $$ = s => [...document.querySelectorAll(s)];
+  // Configuration AdSense
+  const ADSENSE_CLIENT = 'ca-pub-8281021937433044';
 
+  const ADSENSE_SLOTS = {
+    // Page principale
+    'compare-top': '4014485322',
+
+    // Promesses → actes
+    'records-top': '6461674942',
+
+    // Justice
+    'justice-top': '9958066825',
+
+    // Sondages
+    'polls-middle': '1069747469',
+    'polls-bottom': '1069747469',
+
+    // Personnes
+    'people-top': '9378492641',
+
+    // Mes idées
+    'quiz-top': '8453895963',
+
+    // Méthode : on réutilise l'unité Accueil
+    'method-bottom': '4014485322'
+  };
+
+  function getAdSenseSlot(slotName = '') {
+    if (ADSENSE_SLOTS[slotName]) {
+      return ADSENSE_SLOTS[slotName];
+    }
+
+    // Publicités insérées automatiquement entre les contenus
+    if (slotName.startsWith('compare-')) return '3004655984';
+    if (slotName.startsWith('records-')) return '6461674942';
+    if (slotName.startsWith('justice-')) return '9958066825';
+    if (slotName.startsWith('quiz-')) return '8453895963';
+
+    return null;
+  }
+
+  function prepareAdSenseSlots() {
+    document.querySelectorAll('.ad-slot[data-ad-slot]').forEach(box => {
+      const slotName = box.dataset.adSlot || '';
+      const adSenseSlot = getAdSenseSlot(slotName);
+
+      if (!adSenseSlot) return;
+      if (box.querySelector('.adsbygoogle')) return;
+
+      const placeholder = box.querySelector('.ad-placeholder');
+      if (!placeholder) return;
+
+      placeholder.outerHTML = `
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="${ADSENSE_CLIENT}"
+             data-ad-slot="${adSenseSlot}"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      `;
+    });
+  }
+
+  function startVisibleAdSense() {
+    prepareAdSenseSlots();
+
+    document.querySelectorAll('.adsbygoogle').forEach(ad => {
+      if (ad.dataset.psAdsInit === '1') return;
+
+      const style = getComputedStyle(ad);
+
+      // Ne lance pas une pub située dans un onglet actuellement caché.
+      if (
+        ad.offsetWidth <= 0 ||
+        style.display === 'none' ||
+        style.visibility === 'hidden'
+      ) {
+        return;
+      }
+
+      ad.dataset.psAdsInit = '1';
+
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        ad.dataset.psAdsInit = '0';
+      }
+    });
+  }
+
+  let adsRefreshPending = false;
+
+  function refreshAdSense() {
+    if (adsRefreshPending) return;
+
+    adsRefreshPending = true;
+
+    requestAnimationFrame(() => {
+      adsRefreshPending = false;
+      startVisibleAdSense();
+    });
+  }
+
+  const adsObserver = new MutationObserver(refreshAdSense);
+
+  adsObserver.observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['class']
+  });
+
+  window.addEventListener('load', refreshAdSense);
   // V7 · consentement, publicité et détection d'adblock.
   // Aucun script publicitaire tiers n'est chargé ici : ces fonctions servent de garde-fou
   // pour qu'une future régie ne soit activée qu'en fonction du choix du visiteur.
