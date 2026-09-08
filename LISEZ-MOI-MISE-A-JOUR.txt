@@ -75,3 +75,4 @@ fonctionne aussi quand tu ouvres index.html directement sur ton ordinateur.
 CONSEIL
 -------
 Avant chaque grosse mise à jour, garde une copie du ZIP précédent.
+Déploiement Cloudflare Analytics activé le 08/09/2026.
